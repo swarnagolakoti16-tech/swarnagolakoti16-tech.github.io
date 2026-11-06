@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART AGRICULTURE – DIGITAL FARMING</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🌱 SMART AGRICULTURE</h1>
+    <p>DIGITAL FARMING</p>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#crops">Crops</a>
+    <a href="#methods">Farming Methods</a>
+    <a href="#irrigation">Irrigation</a>
+    <a href="#fertilizers">Fertilizers</a>
+    <a href="#soil">Soil</a>
+    <a href="#tips">Farmer Tips</a>
+</nav>
+
+<section id="home" class="hero">
+    <div>
+        <h2>Welcome to Smart Agriculture</h2>
+        <p>Grow Smartly, Farm Efficiently and Build a Better Future.</p>
+        <a href="#crops" class="btn">Explore Agriculture</a>
+    </div>
+</section>
+
+<section id="crops">
+    <h2>🌾 Crop Information</h2>
+
+    <input type="text" id="cropSearch"
+    placeholder="Search crops (Rice, Wheat, Maize...)">
+
+    <div id="cropResults" class="card-container"></div>
+</section>
+
+<section id="methods">
+    <h2>🚜 Modern Farming Methods</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Organic Farming</h3>
+            <p>Uses natural fertilizers and biological pest control.</p>
+        </div>
+
+        <div class="card">
+            <h3>Precision Farming</h3>
+            <p>Uses technology and data to improve crop production.</p>
+        </div>
+
+        <div class="card">
+            <h3>Vertical Farming</h3>
+            <p>Growing crops in vertically stacked layers.</p>
+        </div>
+
+        <div class="card">
+            <h3>Hydroponics</h3>
+            <p>Growing plants without soil using nutrient-rich water.</p>
+        </div>
+    </div>
+</section>
+
+<section id="irrigation">
+    <h2>💧 Irrigation Techniques</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Drip Irrigation</h3>
+            <p>Delivers water directly to plant roots.</p>
+        </div>
+
+        <div class="card">
+            <h3>Sprinkler Irrigation</h3>
+            <p>Sprays water over crops like rainfall.</p>
+        </div>
+
+        <div class="card">
+            <h3>Surface Irrigation</h3>
+            <p>Water flows over the soil surface.</p>
+        </div>
+    </div>
+</section>
+
+<section id="fertilizers">
+    <h2>🧪 Fertilizer Calculator</h2>
+
+    <div class="calculator">
+        <label>Farm Area (in acres)</label>
+        <input type="number" id="area" min="0" step="any"
+        placeholder="Enter farm area">
+
+        <label>Fertilizer Rate (kg per acre)</label>
+        <input type="number" id="rate" min="0" step="any"
+        placeholder="Enter fertilizer rate">
+
+        <button onclick="calculateFertilizer()">
+            Calculate Fertilizer
+        </button>
+
+        <h3 id="result">Total fertilizer required: --</h3>
+        <p>Enter the recommended rate for your crop and soil.</p>
+    </div>
+</section>
+
+<section id="soil">
+    <h2>🌍 Soil Information</h2>
+
+    <div class="card-container">
+        <div class="card">
+            <h3>Alluvial Soil</h3>
+            <p>Suitable for rice, wheat and sugarcane.</p>
+        </div>
+
+        <div class="card">
+            <h3>Black Soil</h3>
+            <p>Suitable for cotton and soybean cultivation.</p>
+        </div>
+
+        <div class="card">
+            <h3>Red Soil</h3>
+            <p>Suitable for groundnut, millets and pulses.</p>
+        </div>
+
+        <div class="card">
+            <h3>Laterite Soil</h3>
+            <p>Suitable for tea, coffee and cashew in suitable regions.</p>
+        </div>
+    </div>
+</section>
+
+<section id="weather">
+    <h2>🌦 Sample Weather Information</h2>
+
+    <div class="weather-box">
+        <h3>Sample Weather Dashboard</h3>
+        <p>Location: Vijayawada</p>
+        <h2>☀️ 30°C</h2>
+        <p>Condition: Partly Cloudy</p>
+        <p>Humidity: 65%</p>
+        <p>Wind Speed: 12 km/h</p>
+        <small>Demonstration data only, not live weather.</small>
+    </div>
+</section>
+
+<section id="gallery">
+    <h2>📸 Interactive Farming Gallery</h2>
+
+    <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?w=600"
+        alt="Green agricultural field" onclick="showImage(this)">
+
+        <img src="https://images.unsplash.com/photo-1499529112087-3cb3b73cec95?w=600"
+        alt="Crop field" onclick="showImage(this)">
+
+        <img src="https://images.unsplash.com/photo-1523742818814-6d6a5f4a6b8d?w=600"
+        alt="Agricultural farming" onclick="showImage(this)">
+    </div>
+</section>
+
+<section id="tips">
+    <h2>👨‍🌾 Smart Farmer Tips</h2>
+
+    <div class="tip-box">
+        <p id="tipText">Click the button to get a farming tip!</p>
+        <button onclick="randomTip()">Get Farming Tip</button>
+    </div>
+</section>
+
+<footer>
+    <h3>🌱 SMART AGRICULTURE – DIGITAL FARMING</h3>
+    <p>Technology for Sustainable Agriculture</p>
+    <p>© 2026 Smart Agriculture Website</p>
+</footer>
+
+<div id="imageModal" class="modal" onclick="closeImage()">
+    <span>&times;</span>
+    <img id="modalImage" alt="Enlarged farming gallery image">
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
